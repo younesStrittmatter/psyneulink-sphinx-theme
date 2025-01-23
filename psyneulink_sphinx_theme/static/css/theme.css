@@ -11258,7 +11258,7 @@ input:checked + .slider:before {
 }
 
 #psyneulink-side-scroll-right {
-  overflow: hidden;
+  overflow: auto;
 }
 
 @media screen and (min-width: 1101px) {
