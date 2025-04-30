@@ -43,6 +43,7 @@ setup(
         "Topic :: Software Development :: Documentation"
     ],
     install_requires=[
-       'sphinx'
+        'sphinx',
+        'sphinxcontrib-jquery',
     ]
 )
