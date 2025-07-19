@@ -10472,7 +10472,7 @@ a:hover {
 }
 @media screen and (min-width: 1101px) {
   .psyneulink-left-menu-search {
-    margin: 1.25rem 0.625rem 1.875rem 0;
+    margin: 0 0.625rem 1.875rem 0;
   }
 }
 
@@ -11180,6 +11180,7 @@ or ((font: -apple-system-body) and (-webkit-appearance: none)) {
 .section #contents dl,
 .section #contents ul,
 .section #contents ol,
+.section #sections li,
 section#contents li,
 section#contents p,
 section#contents dd,
@@ -11204,6 +11205,24 @@ section#contents ol,
 {
     margin-top:0px;
     margin-bottom:0px;
+}
+
+/* Only hide nested <ul> (i.e., submenus), not the top-level menu */
+.psyneulink-menu-vertical .toctree-l1.current .toctree-l2 > ul, .psyneulink-menu-vertical .toctree-l2.current .toctree-l3 > ul, .psyneulink-menu-vertical .toctree-l3.current .toctree-l4 > ul, .psyneulink-menu-vertical .toctree-l4.current .toctree-l5 > ul, .psyneulink-menu-vertical .toctree-l5.current .toctree-l6 > ul, .psyneulink-menu-vertical .toctree-l6.current .toctree-l7 > ul, .psyneulink-menu-vertical .toctree-l7.current .toctree-l8 > ul, .psyneulink-menu-vertical .toctree-l8.current .toctree-l9 > ul, .psyneulink-menu-vertical .toctree-l9.current .toctree-l10 > ul, .psyneulink-menu-vertical .toctree-l10.current .toctree-l11 > ul {
+    display: none
+}
+
+.psyneulink-menu-vertical .toctree-l1.current .current.toctree-l2 > ul, .psyneulink-menu-vertical .toctree-l2.current .current.toctree-l3 > ul, .psyneulink-menu-vertical .toctree-l3.current .current.toctree-l4 > ul, .psyneulink-menu-vertical .toctree-l4.current .current.toctree-l5 > ul, .psyneulink-menu-vertical .toctree-l5.current .current.toctree-l6 > ul, .psyneulink-menu-vertical .toctree-l6.current .current.toctree-l7 > ul, .psyneulink-menu-vertical .toctree-l7.current .current.toctree-l8 > ul, .psyneulink-menu-vertical .toctree-l8.current .current.toctree-l9 > ul, .psyneulink-menu-vertical .toctree-l9.current .current.toctree-l10 > ul, .psyneulink-menu-vertical .toctree-l10.current .current.toctree-l11 > ul {
+    display: block
+}
+
+.psyneulink-menu-vertical li.current ul {
+    display: block
+}
+
+.psyneulink-menu-vertical li ul {
+    margin-bottom: 0;
+    display: none
 }
 
 .section #sections dl.simple {
@@ -11307,7 +11326,7 @@ input:checked + .slider:before {
 }
 @media screen and (min-width: 1101px) {
   .psyneulink-left-menu ul{
-    margin: 1.25rem 0.625rem 1.875rem 0;
+    margin: 0 0.625rem 1.875rem 0;
   }
 }
 
@@ -11317,4 +11336,20 @@ input:checked + .slider:before {
 
 .psyneulink-content-wrap section {
   padding-top: var(--header-spacing);
+}
+
+section#contents ul,
+section#contents ol,
+section#contents ul ol,
+section#contents ol ol,
+section#contents ul ul,
+section#contents ol ul,
+section#contents ul li {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section#contents li {
+  margin-bottom: 0;
 }
