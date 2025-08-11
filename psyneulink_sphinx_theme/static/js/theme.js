@@ -812,7 +812,7 @@ function ThemeNav () {
                 $("[data-toggle='wy-nav-shift']").removeClass("shift");
                 $("[data-toggle='rst-versions']").toggleClass("shift");
                 // Handle dynamic display of l3 and l4 nav lists
-                self.toggleCurrent(target);
+                // self.toggleCurrent(target);
                 self.hashChange();
             })
             .on('click', "[data-toggle='rst-current-version']", function() {
@@ -885,6 +885,8 @@ function ThemeNav () {
                 link.closest('li.toctree-l2').addClass('current');
                 link.closest('li.toctree-l3').addClass('current');
                 link.closest('li.toctree-l4').addClass('current');
+                link.closest('li.toctree-l5').addClass('current');
+                link.closest('li.toctree-l6').addClass('current');
             }
         }
         catch (err) {
